@@ -19,13 +19,9 @@ from django.urls import path
 from ts import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-
-
+    path("admin/", admin.site.urls),
     ### API ###
-    path('register/', view=views.register),
-    path('login/', view=views.login),
-    path('unlog_all_sesions/', view=views.unlog_all_sessions),
-
-
+    path("register/", view=views.register),
+    path("login/", view=views.login),
+    path("unlog_all_sesions/", view=views.unlog_all_sessions),
 ]

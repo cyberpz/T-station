@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  website:
+    environment:
+      - VIRTUAL_HOST=26nfhj1pqj.cyber.pz.it
+      - LETSENCRYPT_HOST=26nfhj1pqj.cyber.pz.it
+      - VIRTUAL_PORT=80
+    container_name: T-Station
+    restart: always
+    build: ./
+    volumes:
+      - ./T-station:/home/T-Station
+    networks:
+      - "net"
+
+networks:
+  net:
+    external: true
